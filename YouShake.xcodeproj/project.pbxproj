@@ -1,0 +1,290 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0B816A92151CAE8F00697BA8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B816A91151CAE8F00697BA8 /* UIKit.framework */; };
+		0B816A94151CAE8F00697BA8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B816A93151CAE8F00697BA8 /* Foundation.framework */; };
+		0B816A96151CAE8F00697BA8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B816A95151CAE8F00697BA8 /* CoreGraphics.framework */; };
+		0B816A9C151CAE8F00697BA8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0B816A9A151CAE8F00697BA8 /* InfoPlist.strings */; };
+		0B816A9E151CAE8F00697BA8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B816A9D151CAE8F00697BA8 /* main.m */; };
+		0B816AA2151CAE8F00697BA8 /* YSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B816AA1151CAE8F00697BA8 /* YSAppDelegate.m */; };
+		0B816AC8151CB13F00697BA8 /* YSLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B816AC7151CB13F00697BA8 /* YSLoginViewController.m */; };
+		0B816ACD151CB19500697BA8 /* YSLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B816ACC151CB19500697BA8 /* YSLoginView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0B816A8D151CAE8F00697BA8 /* YouShake.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YouShake.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0B816A91151CAE8F00697BA8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		0B816A93151CAE8F00697BA8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		0B816A95151CAE8F00697BA8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		0B816A99151CAE8F00697BA8 /* YouShake-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "YouShake-Info.plist"; sourceTree = "<group>"; };
+		0B816A9B151CAE8F00697BA8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		0B816A9D151CAE8F00697BA8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		0B816A9F151CAE8F00697BA8 /* YouShake-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "YouShake-Prefix.pch"; sourceTree = "<group>"; };
+		0B816AA0151CAE8F00697BA8 /* YSAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YSAppDelegate.h; sourceTree = "<group>"; };
+		0B816AA1151CAE8F00697BA8 /* YSAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YSAppDelegate.m; sourceTree = "<group>"; };
+		0B816AC6151CB13F00697BA8 /* YSLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSLoginViewController.h; sourceTree = "<group>"; };
+		0B816AC7151CB13F00697BA8 /* YSLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSLoginViewController.m; sourceTree = "<group>"; };
+		0B816ACB151CB19500697BA8 /* YSLoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSLoginView.h; sourceTree = "<group>"; };
+		0B816ACC151CB19500697BA8 /* YSLoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSLoginView.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0B816A8A151CAE8F00697BA8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0B816A92151CAE8F00697BA8 /* UIKit.framework in Frameworks */,
+				0B816A94151CAE8F00697BA8 /* Foundation.framework in Frameworks */,
+				0B816A96151CAE8F00697BA8 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0B816A82151CAE8E00697BA8 = {
+			isa = PBXGroup;
+			children = (
+				0B816A97151CAE8F00697BA8 /* YouShake */,
+				0B816A90151CAE8F00697BA8 /* Frameworks */,
+				0B816A8E151CAE8F00697BA8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0B816A8E151CAE8F00697BA8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0B816A8D151CAE8F00697BA8 /* YouShake.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0B816A90151CAE8F00697BA8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0B816A91151CAE8F00697BA8 /* UIKit.framework */,
+				0B816A93151CAE8F00697BA8 /* Foundation.framework */,
+				0B816A95151CAE8F00697BA8 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0B816A97151CAE8F00697BA8 /* YouShake */ = {
+			isa = PBXGroup;
+			children = (
+				0B816ACA151CB18600697BA8 /* view */,
+				0B816AC9151CB17D00697BA8 /* control */,
+				0B816AA0151CAE8F00697BA8 /* YSAppDelegate.h */,
+				0B816AA1151CAE8F00697BA8 /* YSAppDelegate.m */,
+				0B816A98151CAE8F00697BA8 /* Supporting Files */,
+			);
+			path = YouShake;
+			sourceTree = "<group>";
+		};
+		0B816A98151CAE8F00697BA8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0B816A99151CAE8F00697BA8 /* YouShake-Info.plist */,
+				0B816A9A151CAE8F00697BA8 /* InfoPlist.strings */,
+				0B816A9D151CAE8F00697BA8 /* main.m */,
+				0B816A9F151CAE8F00697BA8 /* YouShake-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0B816AC9151CB17D00697BA8 /* control */ = {
+			isa = PBXGroup;
+			children = (
+				0B816AC6151CB13F00697BA8 /* YSLoginViewController.h */,
+				0B816AC7151CB13F00697BA8 /* YSLoginViewController.m */,
+			);
+			name = control;
+			sourceTree = "<group>";
+		};
+		0B816ACA151CB18600697BA8 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				0B816ACB151CB19500697BA8 /* YSLoginView.h */,
+				0B816ACC151CB19500697BA8 /* YSLoginView.m */,
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0B816A8C151CAE8F00697BA8 /* YouShake */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0B816AA5151CAE8F00697BA8 /* Build configuration list for PBXNativeTarget "YouShake" */;
+			buildPhases = (
+				0B816A89151CAE8F00697BA8 /* Sources */,
+				0B816A8A151CAE8F00697BA8 /* Frameworks */,
+				0B816A8B151CAE8F00697BA8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = YouShake;
+			productName = YouShake;
+			productReference = 0B816A8D151CAE8F00697BA8 /* YouShake.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0B816A84151CAE8E00697BA8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = YS;
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = 0B816A87151CAE8E00697BA8 /* Build configuration list for PBXProject "YouShake" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 0B816A82151CAE8E00697BA8;
+			productRefGroup = 0B816A8E151CAE8F00697BA8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0B816A8C151CAE8F00697BA8 /* YouShake */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0B816A8B151CAE8F00697BA8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0B816A9C151CAE8F00697BA8 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0B816A89151CAE8F00697BA8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0B816A9E151CAE8F00697BA8 /* main.m in Sources */,
+				0B816AA2151CAE8F00697BA8 /* YSAppDelegate.m in Sources */,
+				0B816AC8151CB13F00697BA8 /* YSLoginViewController.m in Sources */,
+				0B816ACD151CB19500697BA8 /* YSLoginView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		0B816A9A151CAE8F00697BA8 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0B816A9B151CAE8F00697BA8 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0B816AA3151CAE8F00697BA8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		0B816AA4151CAE8F00697BA8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0B816AA6151CAE8F00697BA8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "YouShake/YouShake-Prefix.pch";
+				INFOPLIST_FILE = "YouShake/YouShake-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		0B816AA7151CAE8F00697BA8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "YouShake/YouShake-Prefix.pch";
+				INFOPLIST_FILE = "YouShake/YouShake-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0B816A87151CAE8E00697BA8 /* Build configuration list for PBXProject "YouShake" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0B816AA3151CAE8F00697BA8 /* Debug */,
+				0B816AA4151CAE8F00697BA8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0B816AA5151CAE8F00697BA8 /* Build configuration list for PBXNativeTarget "YouShake" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0B816AA6151CAE8F00697BA8 /* Debug */,
+				0B816AA7151CAE8F00697BA8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0B816A84151CAE8E00697BA8 /* Project object */;
+}

@@ -1,0 +1,18 @@
+//
+// Prefix header for all source files of the 'YouShake' target in the 'YouShake' project
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_3_0
+#warning "This project uses features only available in iOS SDK 3.0 and later."
+#endif
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+#endif
+
+
+#define kYouShakeFacebookAppID @"326787380711403"
+#define kYouShakeFacebookAppSecret @"8c21835488171591162f0c33e52e6845"
