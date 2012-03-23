@@ -11,6 +11,8 @@
 
 @interface YSPlayerViewController : UIViewController <YSPlayerViewDelegate> {
     
+    NSArray *randomVideos;
+    NSInteger index;
 }
 
 - (YSPlayerView *)playerView;

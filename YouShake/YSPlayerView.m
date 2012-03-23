@@ -10,7 +10,7 @@
 
 @implementation YSPlayerView
 
-@synthesize delegate;
+@synthesize delegate, isLoaded;
 
 - (id)initWithFrame:(CGRect)frame {
     
@@ -18,15 +18,7 @@
 
         [self setBackgroundColor:[UIColor whiteColor]];
         
-        shakeText = [[UILabel alloc] initWithFrame:CGRectZero];
-        
-        [shakeText setText:@"Shake for a recommended YouTube\u2122 video!"];
-        [shakeText setTextColor:[UIColor darkGrayColor]];
-        [shakeText setFont:kYouShakeDefaultFont];
-        
-        [self addSubview:shakeText];
-        
-        [shakeText release];
+        [self createShakeText];
     }
     
     return self;
@@ -91,6 +83,46 @@
 }
 
 
+- (void)createShakeText {
+    
+    if (!shakeText) {
+     
+        shakeText = [[UILabel alloc] initWithFrame:CGRectZero];
+        
+        [shakeText setText:@"Shake for a recommended YouTube\u2122 video!"];
+        [shakeText setTextColor:[UIColor darkGrayColor]];
+        [shakeText setFont:kYouShakeDefaultFont];
+        
+        [self addSubview:shakeText];
+        
+        [shakeText release];
+
+        [self setNeedsLayout];
+    }
+}
+
+
+- (void)reset {
+    
+    if (webView) {
+        
+        [webView stringByEvaluatingJavaScriptFromString:@"YouShake.Video.stop()"];
+        
+        [UIView animateWithDuration:0.5
+                         animations:^{
+                             
+                             [webView setAlpha:0.0];
+                         } 
+                         completion:^(BOOL finished) {
+                             
+                             [webView removeFromSuperview], webView = nil;
+                             isLoaded = NO;
+                             [self createShakeText];
+                         }];
+    }
+}
+
+
 - (void)displayWebViewIfNeeded {
  
     if (shakeText) {
@@ -113,6 +145,19 @@
 }
 
 
+- (void)loadVideo:(NSString *)youtubeID {
+    
+    if (!isLoaded) {
+        
+        return;
+    }
+    
+    NSString *js = [NSString stringWithFormat:@"YouShake.Video.load('youtube', '%@')", youtubeID];
+    
+    [webView stringByEvaluatingJavaScriptFromString:js];
+}
+
+
 - (void)webViewDidFinishLoad:(UIWebView *)aWebView {
     
     NSLog(@"webViewDidFinishLoad");
@@ -121,7 +166,10 @@
         
         isLoaded = YES;
         
-        [webView stringByEvaluatingJavaScriptFromString:@"YouShake.Video.load('youtube', 'TzaVd6zl2bA')"];
+        if (delegate && [delegate respondsToSelector:@selector(playerViewDidFinishLoading:)]) {
+            
+            [delegate playerViewDidFinishLoading:self];
+        }
     }
 }
 

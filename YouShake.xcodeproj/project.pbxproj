@@ -367,6 +367,7 @@
 				GCC_PREFIX_HEADER = "YouShake/YouShake-Prefix.pch";
 				HEADER_SEARCH_PATHS = "$(SRCROOT)/vendor/facebook-ios-sdk/src/**";
 				INFOPLIST_FILE = "YouShake/YouShake-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -379,6 +380,7 @@
 				GCC_PREFIX_HEADER = "YouShake/YouShake-Prefix.pch";
 				HEADER_SEARCH_PATHS = "$(SRCROOT)/vendor/facebook-ios-sdk/src/**";
 				INFOPLIST_FILE = "YouShake/YouShake-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

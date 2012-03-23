@@ -15,6 +15,10 @@
     
     if ((self = [super init])) {
 
+        randomVideos = [[NSArray arrayWithObjects:@"TzaVd6zl2bA", 
+                         @"qqXi8WmQ_WM", @"SAbCyA2rbxM", nil] retain];
+        
+        index = 0;
     }
     
     return self;
@@ -69,11 +73,43 @@
 }
 
 
+- (void)playerViewDidFinishLoading:(YSPlayerView *)playerView {
+
+    [[self playerView] loadVideo:[self randomVideoID]];
+}
+
+
 - (void)handleShake {
     
     NSLog(@"Shook the phone, Fetching a video!");
     
     [[self playerView] displayWebViewIfNeeded];
+    
+    if ([[self playerView] isLoaded]) {
+    
+        if (index < [randomVideos count]) {
+         
+            [[self playerView] loadVideo:[self randomVideoID]];
+        }
+        else {
+            
+            [[self playerView] reset];
+            
+            index = 0;
+        }
+    }
+}
+
+
+- (NSString *)randomVideoID {
+        
+    NSString *randomID = [randomVideos objectAtIndex:index];
+    
+    index += 1;
+    
+    NSLog(@"Loading Video: %@", randomID);
+    
+    return randomID;
 }
 
 
@@ -87,6 +123,14 @@
         default:
             break;
     }
+}
+
+
+- (void)dealloc {
+    
+    [super dealloc];
+    
+    [randomVideos release];
 }
 
 @end

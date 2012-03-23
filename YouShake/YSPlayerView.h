@@ -22,14 +22,22 @@
 }
 
 @property (nonatomic, readwrite, assign) id <YSPlayerViewDelegate>delegate;
+@property (nonatomic, readonly) BOOL isLoaded;
 
 - (void)createWebView;
 
+- (void)createShakeText;
+
 - (void)displayWebViewIfNeeded;
+
+- (void)loadVideo:(NSString *)youtubeID;
+
+- (void)reset;
 
 @end
 
 @protocol YSPlayerViewDelegate <NSObject>
 
 @optional
+- (void)playerViewDidFinishLoading:(YSPlayerView *)playerView;
 @end
