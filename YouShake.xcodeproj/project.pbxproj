@@ -23,6 +23,7 @@
 		0B816B7B151CC4EC00697BA8 /* YSUserDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B816B7A151CC4EC00697BA8 /* YSUserDefaults.m */; };
 		0B816B7E151CCC6400697BA8 /* YSPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B816B7D151CCC6400697BA8 /* YSPlayerViewController.m */; };
 		0B816B81151CCC7900697BA8 /* YSPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B816B80151CCC7900697BA8 /* YSPlayerView.m */; };
+		0BF8D379151CDB43008298B6 /* player.html in Resources */ = {isa = PBXBuildFile; fileRef = 0BF8D378151CDB43008298B6 /* player.html */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		0B816B7D151CCC6400697BA8 /* YSPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSPlayerViewController.m; sourceTree = "<group>"; };
 		0B816B7F151CCC7900697BA8 /* YSPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSPlayerView.h; sourceTree = "<group>"; };
 		0B816B80151CCC7900697BA8 /* YSPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSPlayerView.m; sourceTree = "<group>"; };
+		0BF8D378151CDB43008298B6 /* player.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = player.html; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +136,7 @@
 			children = (
 				0B816B56151CBC2800697BA8 /* Images */,
 				0B816A99151CAE8F00697BA8 /* YouShake-Info.plist */,
+				0BF8D378151CDB43008298B6 /* player.html */,
 				0B816A9A151CAE8F00697BA8 /* InfoPlist.strings */,
 				0B816A9D151CAE8F00697BA8 /* main.m */,
 				0B816A9F151CAE8F00697BA8 /* YouShake-Prefix.pch */,
@@ -270,6 +273,7 @@
 				0B816B59151CBD8C00697BA8 /* facebook-login-down.png in Resources */,
 				0B816B5A151CBD8C00697BA8 /* facebook-login-up.png in Resources */,
 				0B816B5C151CC04700697BA8 /* facebook-login-highlight.png in Resources */,
+				0BF8D379151CDB43008298B6 /* player.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

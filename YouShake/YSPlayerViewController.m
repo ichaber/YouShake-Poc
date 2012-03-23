@@ -15,7 +15,6 @@
     
     if ((self = [super init])) {
 
-        [[UIAccelerometer sharedAccelerometer] setDelegate:self];
     }
     
     return self;
@@ -30,6 +29,13 @@
     [self setView:v];
     [v release];
 }
+
+
+- (YSPlayerView *)playerView {
+    
+    return (YSPlayerView *)[self view];
+}
+
 
 - (void)viewDidLoad {
     
@@ -63,36 +69,24 @@
 }
 
 
-- (void)accelerometer:(UIAccelerometer *)accelerometer didAccelerate:(UIAcceleration *)acceleration {
-
-    if (lastAcceleration) {
-
-        if (!shakeTriggered && [self checkIfShaking:acceleration threshold:0.7]) {
-            
-            shakeTriggered = YES;
-            
-            // Shake happened.
-            
-        } else if (shakeTriggered && ![self checkIfShaking:acceleration threshold:0.2]) {
-
-            shakeTriggered = NO;
-        }
-    }
+- (void)handleShake {
     
-    lastAcceleration = acceleration;
+    NSLog(@"Shook the phone, Fetching a video!");
+    
+    [[self playerView] displayWebViewIfNeeded];
 }
 
-// Ensures the shake is strong enough on at least two axes before declaring it a shake.
-// "Strong enough" means "greater than a client-supplied threshold" in G's.
-- (BOOL)checkIfShaking:(UIAcceleration *)current threshold:(double)threshold {
 
-    double  deltaX = fabs(lastAcceleration.x - current.x),
-            deltaY = fabs(lastAcceleration.y - current.y),
-            deltaZ = fabs(lastAcceleration.z - current.z);
-    
-    return  (deltaX > threshold && deltaY > threshold) ||
-            (deltaX > threshold && deltaZ > threshold) ||
-            (deltaY > threshold && deltaZ > threshold);
+- (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event {
+
+    switch (motion) {
+        case UIEventSubtypeMotionShake:
+            [self handleShake];
+            break;
+            
+        default:
+            break;
+    }
 }
 
 @end
