@@ -9,8 +9,12 @@
 #import <UIKit/UIKit.h>
 #import "YSPlayerView.h"
 
-@interface YSPlayerViewController : UIViewController <YSPlayerViewDelegate> {
+@interface YSPlayerViewController : UIViewController <YSPlayerViewDelegate, UIAccelerometerDelegate> {
     
+    UIAcceleration *lastAcceleration;
+    BOOL shakeTriggered;
 }
+
+- (BOOL)checkIfShaking:(UIAcceleration *)current threshold:(double)threshold;
 
 @end
