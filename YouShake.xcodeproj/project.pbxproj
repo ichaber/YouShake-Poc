@@ -15,7 +15,25 @@
 		0B816AA2151CAE8F00697BA8 /* YSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B816AA1151CAE8F00697BA8 /* YSAppDelegate.m */; };
 		0B816AC8151CB13F00697BA8 /* YSLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B816AC7151CB13F00697BA8 /* YSLoginViewController.m */; };
 		0B816ACD151CB19500697BA8 /* YSLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B816ACC151CB19500697BA8 /* YSLoginView.m */; };
+		0B816B51151CB78F00697BA8 /* libfacebook_ios_sdk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B816B4E151CB76D00697BA8 /* libfacebook_ios_sdk.a */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0B816B4D151CB76D00697BA8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0B816B46151CB76D00697BA8 /* facebook-ios-sdk.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D2AAC07E0554694100DB518D;
+			remoteInfo = "facebook-ios-sdk";
+		};
+		0B816B4F151CB78300697BA8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0B816B46151CB76D00697BA8 /* facebook-ios-sdk.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D2AAC07D0554694100DB518D;
+			remoteInfo = "facebook-ios-sdk";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		0B816A8D151CAE8F00697BA8 /* YouShake.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YouShake.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -32,6 +50,7 @@
 		0B816AC7151CB13F00697BA8 /* YSLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSLoginViewController.m; sourceTree = "<group>"; };
 		0B816ACB151CB19500697BA8 /* YSLoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSLoginView.h; sourceTree = "<group>"; };
 		0B816ACC151CB19500697BA8 /* YSLoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSLoginView.m; sourceTree = "<group>"; };
+		0B816B46151CB76D00697BA8 /* facebook-ios-sdk.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "facebook-ios-sdk.xcodeproj"; path = "vendor/facebook-ios-sdk/src/facebook-ios-sdk.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B816B51151CB78F00697BA8 /* libfacebook_ios_sdk.a in Frameworks */,
 				0B816A92151CAE8F00697BA8 /* UIKit.framework in Frameworks */,
 				0B816A94151CAE8F00697BA8 /* Foundation.framework in Frameworks */,
 				0B816A96151CAE8F00697BA8 /* CoreGraphics.framework in Frameworks */,
@@ -68,6 +88,7 @@
 		0B816A90151CAE8F00697BA8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0B816AD7151CB62200697BA8 /* Dependencies */,
 				0B816A91151CAE8F00697BA8 /* UIKit.framework */,
 				0B816A93151CAE8F00697BA8 /* Foundation.framework */,
 				0B816A95151CAE8F00697BA8 /* CoreGraphics.framework */,
@@ -116,6 +137,22 @@
 			name = view;
 			sourceTree = "<group>";
 		};
+		0B816AD7151CB62200697BA8 /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				0B816B46151CB76D00697BA8 /* facebook-ios-sdk.xcodeproj */,
+			);
+			name = Dependencies;
+			sourceTree = "<group>";
+		};
+		0B816B47151CB76D00697BA8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0B816B4E151CB76D00697BA8 /* libfacebook_ios_sdk.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -130,6 +167,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				0B816B50151CB78300697BA8 /* PBXTargetDependency */,
 			);
 			name = YouShake;
 			productName = YouShake;
@@ -155,12 +193,28 @@
 			mainGroup = 0B816A82151CAE8E00697BA8;
 			productRefGroup = 0B816A8E151CAE8F00697BA8 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 0B816B47151CB76D00697BA8 /* Products */;
+					ProjectRef = 0B816B46151CB76D00697BA8 /* facebook-ios-sdk.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				0B816A8C151CAE8F00697BA8 /* YouShake */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		0B816B4E151CB76D00697BA8 /* libfacebook_ios_sdk.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libfacebook_ios_sdk.a;
+			remoteRef = 0B816B4D151CB76D00697BA8 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		0B816A8B151CAE8F00697BA8 /* Resources */ = {
@@ -186,6 +240,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0B816B50151CB78300697BA8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "facebook-ios-sdk";
+			targetProxy = 0B816B4F151CB78300697BA8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		0B816A9A151CAE8F00697BA8 /* InfoPlist.strings */ = {
