@@ -14,5 +14,10 @@
 #endif
 
 
+#define kYouShakeDefaultFontName @"HelveticaNeue"
+#define kYouShakeDefaultFontSize 14.0
+#define kYouShakeDefaultFont [UIFont fontWithName:kYouShakeDefaultFontName size:kYouShakeDefaultFontSize]
+
 #define kYouShakeFacebookAppID @"326787380711403"
 #define kYouShakeFacebookAppSecret @"8c21835488171591162f0c33e52e6845"
+#define kYouShakeFacebookAppPermissions [NSArray arrayWithObjects:@"read_stream", @"read_friendlists", @"read_insights", @"offline_access", @"email", nil]

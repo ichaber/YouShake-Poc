@@ -1,5 +1,5 @@
 //
-//  YSLoginViewController.h
+//  YSPlayerViewController.h
 //  YouShake
 //
 //  Created by Nicholas Jensen on 3/23/12.
@@ -7,11 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "FBConnect.h"
-#import "YSLoginView.h"
+#import "YSPlayerView.h"
 
-@interface YSLoginViewController : UIViewController <YSLoginViewDelegate> {
- 
+@interface YSPlayerViewController : UIViewController <YSPlayerViewDelegate> {
+    
 }
 
 @end

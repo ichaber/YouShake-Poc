@@ -7,15 +7,22 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FBConnect.h"
 
-@class YSLoginViewController;
+@class YSLoginViewController, YSPlayerViewController;
 
-@interface YSAppDelegate : UIResponder <UIApplicationDelegate> {
+@interface YSAppDelegate : UIResponder <UIApplicationDelegate, FBSessionDelegate> {
 
     UIWindow *window;
     YSLoginViewController *loginViewController;
+    YSPlayerViewController *playerViewController;
+    Facebook *facebook;
 }
 
 @property (nonatomic, strong) UIWindow *window;
+
+- (void)displayPlayerView;
+
+- (void)displayLoginView;
 
 @end

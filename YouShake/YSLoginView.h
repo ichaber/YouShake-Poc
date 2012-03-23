@@ -8,6 +8,21 @@
 
 #import <UIKit/UIKit.h>
 
-@interface YSLoginView : UIView
+@protocol YSLoginViewDelegate;
 
+@interface YSLoginView : UIView {
+    
+    id <YSLoginViewDelegate>delegate;
+    UIButton *loginButton;
+}
+
+@property (nonatomic, readwrite, assign) id <YSLoginViewDelegate>delegate;
+
+@end
+
+
+@protocol YSLoginViewDelegate <NSObject>
+
+@optional
+- (void)loginView:(YSLoginView *)view facebookButtonPressed:(UIButton *)button;
 @end

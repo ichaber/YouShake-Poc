@@ -8,6 +8,8 @@
 
 #import "YSAppDelegate.h"
 #import "YSLoginViewController.h"
+#import "YSPlayerViewController.h"
+#import "YSUserDefaults.h"
 
 @implementation YSAppDelegate
 
@@ -19,23 +21,133 @@
     [self setWindow:mainWindow];
     [mainWindow release];
     
-    BOOL loggedIn = NO;
-    
-    if (!loggedIn) {
-     
-        loginViewController = [[YSLoginViewController alloc] init];
+    [facebook release];
+    facebook = [[Facebook alloc] initWithAppId:kYouShakeFacebookAppID andDelegate:nil];
+    [facebook setAccessToken:[YSUserDefaults facebookOAuthToken]];
+    [facebook setExpirationDate:[YSUserDefaults facebookAuthExpireDate]];
         
-        [[self window] addSubview:[loginViewController view]];
+    if (![facebook isSessionValid]) {
+     
+        NSLog(@"Not logged in.");
+        
+        [self displayLoginView];
     }
     else {
      
-        // TODO Skip the login, show main view.
+        NSLog(@"You are already logged in!");
+        
+        [self displayPlayerView];
     }
-    
-    [[self window] makeKeyAndVisible];
     
     return YES;
 }
+
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url {
+    
+    BOOL isFacebookURL = [[url scheme] isEqualToString:[NSString stringWithFormat:@"fb%@", kYouShakeFacebookAppID]];    
+
+    if (isFacebookURL) {
+        
+        [facebook release];
+		facebook = [[Facebook alloc] initWithAppId:kYouShakeFacebookAppID andDelegate:self];
+        [facebook handleOpenURL:url];
+    }
+    
+    return isFacebookURL;
+}
+
+
+- (void)displayLoginView {
+    
+    if (loginViewController) {
+
+        return;
+    }
+    
+    if (playerViewController) {
+        
+        [[playerViewController view] removeFromSuperview];
+        [playerViewController release];
+        playerViewController = nil;
+    }
+    
+    loginViewController = [[YSLoginViewController alloc] init];
+    
+    [[self window] addSubview:[loginViewController view]];
+    [[self window] makeKeyAndVisible];
+}
+
+
+- (void)displayPlayerView {
+    
+    if (playerViewController) {
+
+        return;
+    }
+    
+    if (loginViewController) {
+        
+        [[loginViewController view] removeFromSuperview];
+        [loginViewController release];
+        loginViewController = nil;
+    }
+    
+    playerViewController = [[YSPlayerViewController alloc] init];
+    
+    [[self window] addSubview:[playerViewController view]];
+    [[self window] makeKeyAndVisible];
+}
+
+
+#pragma mark - FBSessionDelegate Methods
+
+
+- (void)fbDidLogin {
+ 
+    NSLog(@"fbDidLogin");
+    
+    [YSUserDefaults setFacebookOAuthToken:[facebook accessToken]];
+    [YSUserDefaults setFacebookAuthExpireDate:[facebook expirationDate]];
+    
+    NSLog(@"Got Token: %@", [facebook accessToken]);
+    NSLog(@"  Expires: %@", [facebook expirationDate]);
+    
+    if ([facebook isSessionValid]) {
+        
+        [self displayPlayerView];
+    }
+}
+
+
+- (void)fbDidNotLogin:(BOOL)cancelled {
+
+    NSLog(@"fbDidLogin:%d", cancelled);
+    
+    [self displayLoginView];
+}
+
+
+- (void)fbDidLogout {
+    
+    NSLog(@"fbDidLogout");
+    
+    [self displayLoginView];
+}
+
+
+- (void)fbSessionInvalidated {
+    
+    NSLog(@"fbSessionInvalidated");
+}
+
+- (void)fbDidExtendToken:(NSString*)accessToken expiresAt:(NSDate*)expiresAt {
+
+    NSLog(@"fbDidExtendToken:%@ expiresAt:%@", accessToken, expiresAt);
+}
+
+
+#pragma mark - UIApplicationDelegate Methods
+
 
 - (void)applicationWillResignActive:(UIApplication *)application {
 
@@ -60,6 +172,9 @@
 - (void)dealloc {
     
     [window release];
+    [facebook release];
+    [loginViewController release];
+    [playerViewController release];
     [super dealloc];
 }
 

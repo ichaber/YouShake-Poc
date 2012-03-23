@@ -16,6 +16,13 @@
 		0B816AC8151CB13F00697BA8 /* YSLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B816AC7151CB13F00697BA8 /* YSLoginViewController.m */; };
 		0B816ACD151CB19500697BA8 /* YSLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B816ACC151CB19500697BA8 /* YSLoginView.m */; };
 		0B816B51151CB78F00697BA8 /* libfacebook_ios_sdk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B816B4E151CB76D00697BA8 /* libfacebook_ios_sdk.a */; };
+		0B816B55151CBA1100697BA8 /* UIButton+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B816B54151CBA1100697BA8 /* UIButton+Extensions.m */; };
+		0B816B59151CBD8C00697BA8 /* facebook-login-down.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B816B57151CBD8C00697BA8 /* facebook-login-down.png */; };
+		0B816B5A151CBD8C00697BA8 /* facebook-login-up.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B816B58151CBD8C00697BA8 /* facebook-login-up.png */; };
+		0B816B5C151CC04700697BA8 /* facebook-login-highlight.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B816B5B151CC04700697BA8 /* facebook-login-highlight.png */; };
+		0B816B7B151CC4EC00697BA8 /* YSUserDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B816B7A151CC4EC00697BA8 /* YSUserDefaults.m */; };
+		0B816B7E151CCC6400697BA8 /* YSPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B816B7D151CCC6400697BA8 /* YSPlayerViewController.m */; };
+		0B816B81151CCC7900697BA8 /* YSPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B816B80151CCC7900697BA8 /* YSPlayerView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +58,17 @@
 		0B816ACB151CB19500697BA8 /* YSLoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSLoginView.h; sourceTree = "<group>"; };
 		0B816ACC151CB19500697BA8 /* YSLoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSLoginView.m; sourceTree = "<group>"; };
 		0B816B46151CB76D00697BA8 /* facebook-ios-sdk.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "facebook-ios-sdk.xcodeproj"; path = "vendor/facebook-ios-sdk/src/facebook-ios-sdk.xcodeproj"; sourceTree = "<group>"; };
+		0B816B53151CBA1100697BA8 /* UIButton+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Extensions.h"; sourceTree = "<group>"; };
+		0B816B54151CBA1100697BA8 /* UIButton+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Extensions.m"; sourceTree = "<group>"; };
+		0B816B57151CBD8C00697BA8 /* facebook-login-down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "facebook-login-down.png"; sourceTree = "<group>"; };
+		0B816B58151CBD8C00697BA8 /* facebook-login-up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "facebook-login-up.png"; sourceTree = "<group>"; };
+		0B816B5B151CC04700697BA8 /* facebook-login-highlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "facebook-login-highlight.png"; sourceTree = "<group>"; };
+		0B816B79151CC4EC00697BA8 /* YSUserDefaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSUserDefaults.h; sourceTree = "<group>"; };
+		0B816B7A151CC4EC00697BA8 /* YSUserDefaults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSUserDefaults.m; sourceTree = "<group>"; };
+		0B816B7C151CCC6400697BA8 /* YSPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSPlayerViewController.h; sourceTree = "<group>"; };
+		0B816B7D151CCC6400697BA8 /* YSPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSPlayerViewController.m; sourceTree = "<group>"; };
+		0B816B7F151CCC7900697BA8 /* YSPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSPlayerView.h; sourceTree = "<group>"; };
+		0B816B80151CCC7900697BA8 /* YSPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSPlayerView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,10 +117,13 @@
 		0B816A97151CAE8F00697BA8 /* YouShake */ = {
 			isa = PBXGroup;
 			children = (
+				0B816B52151CB9A900697BA8 /* extra */,
 				0B816ACA151CB18600697BA8 /* view */,
 				0B816AC9151CB17D00697BA8 /* control */,
 				0B816AA0151CAE8F00697BA8 /* YSAppDelegate.h */,
 				0B816AA1151CAE8F00697BA8 /* YSAppDelegate.m */,
+				0B816B79151CC4EC00697BA8 /* YSUserDefaults.h */,
+				0B816B7A151CC4EC00697BA8 /* YSUserDefaults.m */,
 				0B816A98151CAE8F00697BA8 /* Supporting Files */,
 			);
 			path = YouShake;
@@ -111,6 +132,7 @@
 		0B816A98151CAE8F00697BA8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				0B816B56151CBC2800697BA8 /* Images */,
 				0B816A99151CAE8F00697BA8 /* YouShake-Info.plist */,
 				0B816A9A151CAE8F00697BA8 /* InfoPlist.strings */,
 				0B816A9D151CAE8F00697BA8 /* main.m */,
@@ -124,6 +146,8 @@
 			children = (
 				0B816AC6151CB13F00697BA8 /* YSLoginViewController.h */,
 				0B816AC7151CB13F00697BA8 /* YSLoginViewController.m */,
+				0B816B7C151CCC6400697BA8 /* YSPlayerViewController.h */,
+				0B816B7D151CCC6400697BA8 /* YSPlayerViewController.m */,
 			);
 			name = control;
 			sourceTree = "<group>";
@@ -133,6 +157,8 @@
 			children = (
 				0B816ACB151CB19500697BA8 /* YSLoginView.h */,
 				0B816ACC151CB19500697BA8 /* YSLoginView.m */,
+				0B816B7F151CCC7900697BA8 /* YSPlayerView.h */,
+				0B816B80151CCC7900697BA8 /* YSPlayerView.m */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -151,6 +177,25 @@
 				0B816B4E151CB76D00697BA8 /* libfacebook_ios_sdk.a */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		0B816B52151CB9A900697BA8 /* extra */ = {
+			isa = PBXGroup;
+			children = (
+				0B816B53151CBA1100697BA8 /* UIButton+Extensions.h */,
+				0B816B54151CBA1100697BA8 /* UIButton+Extensions.m */,
+			);
+			name = extra;
+			sourceTree = "<group>";
+		};
+		0B816B56151CBC2800697BA8 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				0B816B5B151CC04700697BA8 /* facebook-login-highlight.png */,
+				0B816B57151CBD8C00697BA8 /* facebook-login-down.png */,
+				0B816B58151CBD8C00697BA8 /* facebook-login-up.png */,
+			);
+			path = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -222,6 +267,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B816A9C151CAE8F00697BA8 /* InfoPlist.strings in Resources */,
+				0B816B59151CBD8C00697BA8 /* facebook-login-down.png in Resources */,
+				0B816B5A151CBD8C00697BA8 /* facebook-login-up.png in Resources */,
+				0B816B5C151CC04700697BA8 /* facebook-login-highlight.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,6 +284,10 @@
 				0B816AA2151CAE8F00697BA8 /* YSAppDelegate.m in Sources */,
 				0B816AC8151CB13F00697BA8 /* YSLoginViewController.m in Sources */,
 				0B816ACD151CB19500697BA8 /* YSLoginView.m in Sources */,
+				0B816B55151CBA1100697BA8 /* UIButton+Extensions.m in Sources */,
+				0B816B7B151CC4EC00697BA8 /* YSUserDefaults.m in Sources */,
+				0B816B7E151CCC6400697BA8 /* YSPlayerViewController.m in Sources */,
+				0B816B81151CCC7900697BA8 /* YSPlayerView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,6 +361,7 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "YouShake/YouShake-Prefix.pch";
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/vendor/facebook-ios-sdk/src/**";
 				INFOPLIST_FILE = "YouShake/YouShake-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -320,6 +373,7 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "YouShake/YouShake-Prefix.pch";
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/vendor/facebook-ios-sdk/src/**";
 				INFOPLIST_FILE = "YouShake/YouShake-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
